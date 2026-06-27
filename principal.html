@@ -1,0 +1,2232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Renda Extra com Claude · Domine a IA e Ganhe Dinheiro</title>
+  <meta name="description" content="Aprenda a usar o Claude AI para gerar renda extra de verdade. Método prático, sem investimento inicial. De R$197 por apenas R$57,00.">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Renda Extra com Claude">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Renda Extra com Claude · Domine a IA e Ganhe Dinheiro">
+  <meta property="og:description" content="Aprenda a usar o Claude AI para gerar renda extra de verdade. Método prático, sem investimento inicial. De R$197 por apenas R$57,00.">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0c0a07">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230c0a07'/><circle cx='32' cy='30' r='18' fill='%23D4A27F' opacity='0.3'/><text x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='34' font-weight='700' fill='%23f5efe2'>C</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0c0a07;
+      --bg-elev: #141009;
+      --surface: #1a1610;
+      --surface-2: #221c14;
+      --border: #2e2618;
+      --border-strong: #3d3220;
+      --text: #f5ecd7;
+      --text-dim: #c6b698;
+      --text-muted: #8a7e66;
+      --accent: #D4A27F;
+      --accent-hot: #E8B896;
+      --accent-2: #CC785C;
+      --accent-deep: #A0604A;
+      --success: #6ee787;
+      --danger: #ff5454;
+      --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --font-serif: 'Instrument Serif', Georgia, serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      background-image:
+        radial-gradient(1200px 600px at 80% -10%, rgba(212,162,127,.12), transparent 60%),
+        radial-gradient(900px 500px at -10% 30%, rgba(204,120,92,.08), transparent 60%);
+      mix-blend-mode: screen;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2;
+      opacity: .4;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 0.85 0 0 0 0 0.55 0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    }
+
+    #app { position: relative; z-index: 3; }
+
+    .wrap { width: min(1200px, 92vw); margin: 0 auto; }
+    .wrap-narrow { width: min(820px, 92vw); margin: 0 auto; }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      line-height: 1.05;
+      color: var(--text);
+    }
+
+    .serif-it {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: -.01em;
+    }
+
+    h1 { font-size: clamp(44px, 7.2vw, 88px); }
+    h2 { font-size: clamp(36px, 5.4vw, 64px); }
+    h3 { font-size: clamp(22px, 2.4vw, 30px); letter-spacing: -.015em; }
+    p { margin: 0; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding: 8px 14px;
+      border: 1px solid color-mix(in oklab, var(--accent) 35%, transparent);
+      border-radius: 999px;
+      background: color-mix(in oklab, var(--accent) 8%, transparent);
+    }
+
+    .eyebrow .dot {
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .5; transform: scale(1.4); }
+    }
+
+    section { padding: 96px 0; position: relative; }
+
+    .section-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .section-tag::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: var(--text-muted);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 18px 28px;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: -.005em;
+      border-radius: 14px;
+      border: none;
+      cursor: pointer;
+      transition: transform 120ms, box-shadow .2s, background .2s;
+      text-decoration: none;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(180deg, var(--accent-hot) 0%, var(--accent) 60%, var(--accent-deep) 100%);
+      color: #1a0a02;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.35),
+        0 1px 0 rgba(0,0,0,.4),
+        0 18px 40px -12px rgba(212,162,127,.55),
+        0 4px 12px -4px rgba(212,162,127,.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.4),
+        0 22px 50px -10px rgba(212,162,127,.7),
+        0 6px 14px -4px rgba(212,162,127,.5);
+    }
+
+    .btn-primary:active { transform: translateY(0); }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border-strong);
+    }
+
+    .btn-ghost:hover {
+      background: var(--surface);
+      border-color: var(--text-muted);
+    }
+
+    .btn-xl { padding: 22px 34px; font-size: 21px; }
+
+    .btn-arrow { transition: transform .2s; font-size: .9em; }
+    .btn:hover .btn-arrow { transform: translateX(4px); }
+
+    .cta-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      row-gap: 8px;
+      font-size: 14px;
+      color: var(--text-dim);
+      margin-top: 16px;
+      align-items: center;
+    }
+
+    .cta-trust span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cta-trust .check { color: var(--success); font-size: 14px; }
+
+    /* ========== NAV - CUSTOMIZADO ========== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px) saturate(140%);
+      background: color-mix(in oklab, var(--bg) 75%, transparent);
+      border-bottom: 1px solid var(--border);
+      transition: backdrop-filter 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                  background 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                  border-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                  box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .nav.scrolled {
+      backdrop-filter: blur(24px) saturate(180%);
+      background: color-mix(in oklab, var(--bg) 92%, transparent);
+      border-bottom-color: color-mix(in oklab, var(--accent) 25%, var(--border));
+      box-shadow: 0 4px 40px rgba(0,0,0,0.5);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: -.01em;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .logo-text {
+      background: linear-gradient(135deg, var(--accent-hot), var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 800;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-cta {
+      padding: 10px 18px !important;
+      font-size: 14px !important;
+      border-radius: 10px !important;
+    }
+
+    @media (max-width: 760px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      padding: 80px 0 110px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(12,10,7,0.3) 50%, var(--bg) 100%);
+    }
+
+    .hero-blur-overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      backdrop-filter: blur(0px);
+      transition: backdrop-filter 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      background: rgba(12,10,7,0);
+      transition: backdrop-filter 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                  background 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .hero-blur-overlay.active {
+      backdrop-filter: blur(8px) saturate(130%);
+      background: rgba(12,10,7,0.15);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 1020px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+    }
+
+    .hero-eyebrow-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+      align-items: center;
+    }
+
+    .hero h1 { max-width: 16ch; margin-bottom: 26px; }
+    .hero h1 .accent-word { color: var(--accent); }
+
+    .hero-sub {
+      font-size: clamp(17px, 1.5vw, 21px);
+      color: var(--text-dim);
+      max-width: 60ch;
+      line-height: 1.5;
+      margin-bottom: 36px;
+    }
+
+    .hero-sub b { color: var(--text); font-weight: 600; }
+
+    .hero-cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    /* Dashboard Mock */
+    .dash {
+      position: relative;
+      background: linear-gradient(180deg, #1c1810, #14110a);
+      border: 1px solid var(--border-strong);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow:
+        0 40px 100px -30px rgba(0,0,0,.7),
+        0 12px 30px -10px rgba(212,162,127,.18),
+        inset 0 1px 0 rgba(255,255,255,.04);
+      transform: perspective(1200px) rotateX(2deg) rotateY(-3deg);
+    }
+
+    .dash-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .dash-title {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .dash-pill {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: color-mix(in oklab, var(--success) 18%, transparent);
+      color: var(--success);
+      font-family: var(--font-mono);
+    }
+
+    .dash-mrr-label {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--text-muted);
+      letter-spacing: .1em;
+    }
+
+    .dash-mrr {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(40px, 4.5vw, 56px);
+      color: var(--text);
+      letter-spacing: -.03em;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .dash-mrr .currency { font-size: .55em; color: var(--accent); }
+    .dash-mrr .delta {
+      font-size: .32em;
+      color: var(--success);
+      font-family: var(--font-mono);
+      font-weight: 500;
+      padding-left: 8px;
+    }
+
+    .dash-sub { color: var(--text-muted); font-size: 13px; margin-top: 4px; }
+
+    .dash-bars {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 6px;
+      height: 96px;
+      margin-top: 22px;
+      align-items: end;
+    }
+
+    .dash-bar {
+      background: linear-gradient(180deg, var(--accent), var(--accent-deep));
+      border-radius: 4px 4px 2px 2px;
+      opacity: .7;
+      transition: opacity .3s;
+    }
+
+    .dash-bar.last {
+      background: linear-gradient(180deg, var(--accent-hot), var(--accent-deep));
+      opacity: 1;
+      box-shadow: 0 -4px 14px rgba(212,162,127,.5);
+    }
+
+    .dash-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+    }
+
+    .dash-stat-label {
+      font-size: 10px;
+      font-family: var(--font-mono);
+      letter-spacing: .15em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .dash-stat-val {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--text);
+      margin-top: 4px;
+    }
+
+    .dash-stat-val.green { color: var(--success); }
+
+    .dash-tag {
+      position: absolute;
+      bottom: -16px;
+      right: -10px;
+      background: var(--accent);
+      color: #1a0a02;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: .1em;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      transform: rotate(-3deg);
+      box-shadow: 0 8px 20px -8px rgba(212,162,127,.6);
+    }
+
+    .trust-strip {
+      display: flex;
+      gap: 36px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 60px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .trust-strip .label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .trust-strip .stat-mini {
+      display: inline-flex;
+      gap: 8px;
+      align-items: baseline;
+      color: var(--text-dim);
+    }
+
+    .trust-strip .stat-mini b {
+      color: var(--text);
+      font-weight: 700;
+      font-family: var(--font-display);
+      font-size: 18px;
+    }
+
+    /* ========== PAIN SECTION ========== */
+    .pain { background: var(--bg-elev); }
+
+    .pain-header { max-width: 720px; margin-bottom: 48px; }
+
+    .pain-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    @media (max-width: 800px) { .pain-list { grid-template-columns: 1fr; } }
+
+    .pain-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 22px 22px 56px;
+      position: relative;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--text-dim);
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .pain-item:hover {
+      border-color: var(--border-strong);
+      transform: translateX(2px);
+    }
+
+    .pain-check {
+      position: absolute;
+      left: 18px;
+      top: 22px;
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      border: 1.5px solid var(--border-strong);
+      display: grid;
+      place-items: center;
+      transition: .2s;
+    }
+
+    .pain-item.checked {
+      color: var(--text);
+      background: color-mix(in oklab, var(--accent) 6%, var(--surface));
+      border-color: color-mix(in oklab, var(--accent) 40%, var(--border));
+    }
+
+    .pain-item.checked .pain-check {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .pain-item.checked .pain-check::after {
+      content: "✓";
+      color: #1a0a02;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .pain-counter {
+      margin-top: 32px;
+      padding: 22px 26px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, color-mix(in oklab, var(--accent) 14%, var(--surface)) 0, var(--surface) 100%);
+      border: 1px solid color-mix(in oklab, var(--accent) 30%, var(--border));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .pain-counter-text { font-size: 15px; color: var(--text-dim); }
+    .pain-counter-text b { color: var(--text); }
+    .pain-counter-num {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 28px;
+      color: var(--accent);
+    }
+
+    /* ========== SOLUTION / MODULES ========== */
+    .solution-header { max-width: 760px; margin-bottom: 56px; }
+    .solution-header h2 .accent { color: var(--accent); }
+
+    .solution-meta {
+      display: flex;
+      gap: 36px;
+      margin: 32px 0;
+      flex-wrap: wrap;
+    }
+
+    .solution-meta-item .num {
+      font-family: var(--font-display);
+      font-size: 44px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1;
+      letter-spacing: -.03em;
+    }
+
+    .solution-meta-item .num span { color: var(--accent); }
+
+    .solution-meta-item .lbl {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    .timeline { position: relative; padding-left: 0; }
+
+    .timeline-track {
+      position: absolute;
+      left: 38px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--accent) 0, var(--accent-deep) 50%, var(--border) 100%);
+      border-radius: 2px;
+    }
+
+    .module {
+      position: relative;
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 32px;
+      padding: 28px 0;
+      align-items: start;
+    }
+
+    .module-num {
+      width: 76px;
+      height: 76px;
+      border-radius: 18px;
+      background: var(--surface);
+      border: 1px solid var(--border-strong);
+      display: grid;
+      place-items: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 28px;
+      color: var(--text);
+      position: relative;
+      z-index: 2;
+      transition: 220ms;
+    }
+
+    .module-num span {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+      letter-spacing: .1em;
+      display: block;
+      margin-top: -4px;
+    }
+
+    .module.active .module-num {
+      background: linear-gradient(135deg, var(--accent-hot), var(--accent-deep));
+      border-color: var(--accent);
+      color: #1a0a02;
+      box-shadow: 0 12px 30px -10px rgba(212,162,127,.6);
+    }
+
+    .module.active .module-num span { color: rgba(26,10,2,.7); }
+
+    .module-body { padding-top: 6px; }
+
+    .module-title {
+      font-family: var(--font-display);
+      font-size: clamp(20px, 2.2vw, 26px);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    .module-title:hover { color: var(--accent); }
+
+    .module-desc {
+      color: var(--text-dim);
+      font-size: 16px;
+      line-height: 1.55;
+      max-width: 66ch;
+    }
+
+    .module-deliverable {
+      margin-top: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: .05em;
+      color: var(--accent);
+      padding: 6px 12px;
+      border-radius: 8px;
+      background: color-mix(in oklab, var(--accent) 10%, transparent);
+      border: 1px solid color-mix(in oklab, var(--accent) 25%, transparent);
+    }
+
+    @media (max-width: 700px) {
+      .timeline-track { left: 28px; }
+      .module { grid-template-columns: 60px 1fr; gap: 18px; }
+      .module-num { width: 56px; height: 56px; font-size: 20px; border-radius: 14px; }
+      .module-num span { font-size: 9px; }
+    }
+
+    /* ========== BENEFITS ========== */
+    .benefits { background: var(--bg-elev); }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 48px;
+    }
+
+    @media (max-width: 800px) { .benefits-grid { grid-template-columns: 1fr; } }
+
+    .benefit {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 26px;
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 18px;
+      align-items: start;
+      transition: transform .2s, border-color .2s;
+    }
+
+    .benefit:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-strong);
+    }
+
+    .benefit-ico {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: color-mix(in oklab, var(--accent) 14%, var(--bg-elev));
+      border: 1px solid color-mix(in oklab, var(--accent) 30%, var(--border));
+      display: grid;
+      place-items: center;
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .benefit-text { font-size: 15px; color: var(--text-dim); line-height: 1.55; }
+    .benefit-text b { color: var(--text); font-weight: 600; }
+
+    /* ========== TESTIMONIALS ========== */
+    .testimonials { margin-top: 64px; }
+
+    .testimonials-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    @media (max-width: 900px) { .testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .testimonials-grid { grid-template-columns: 1fr; } }
+
+    .testimonial {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: transform .2s;
+    }
+
+    .testimonial:hover { transform: translateY(-2px); }
+
+    .testimonial-quote {
+      font-size: 14px;
+      color: var(--text-dim);
+      line-height: 1.55;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-top: 16px;
+    }
+
+    .testimonial-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-deep), var(--accent));
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      font-size: 13px;
+      color: #1a0a02;
+    }
+
+    .testimonial-name { font-size: 13px; color: var(--text); font-weight: 600; }
+    .testimonial-meta {
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      letter-spacing: .05em;
+    }
+
+    .testimonial .tag {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: .1em;
+      padding: 4px 8px;
+      border-radius: 6px;
+      background: color-mix(in oklab, var(--accent) 14%, transparent);
+      color: var(--accent);
+      border: 1px solid color-mix(in oklab, var(--accent) 30%, transparent);
+    }
+
+    /* ========== OFFER / PRICING ========== */
+    .offer {
+      background: radial-gradient(900px 500px at 50% 0, color-mix(in oklab, var(--accent) 8%, transparent), transparent 60%), var(--bg);
+    }
+
+    .offer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    @media (max-width: 920px) { .offer-grid { grid-template-columns: 1fr; } }
+
+    .offer-header h2 { margin-bottom: 18px; }
+    .offer-header h2 .accent { color: var(--accent); }
+
+    .offer-header p {
+      color: var(--text-dim);
+      font-size: 17px;
+      line-height: 1.6;
+      max-width: 48ch;
+    }
+
+    .offer-stack-wrap { margin-top: 36px; }
+
+    .offer-stack {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .offer-stack li {
+      display: grid;
+      grid-template-columns: 56px 1fr auto;
+      gap: 18px;
+      align-items: center;
+      padding: 22px 0;
+      border-top: 1px dashed color-mix(in oklab, var(--border) 75%, transparent);
+    }
+
+    .offer-stack li:first-child { border-top: 0; padding-top: 6px; }
+
+    .offer-stack .n {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 26px;
+      color: var(--accent);
+      line-height: 1;
+      letter-spacing: -.02em;
+    }
+
+    .offer-stack-title {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .offer-stack-sub {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .offer-stack-price {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--text-dim);
+      letter-spacing: -.01em;
+      white-space: nowrap;
+    }
+
+    .offer-stack-total {
+      margin-top: 20px;
+      padding: 18px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: color-mix(in oklab, var(--accent) 8%, var(--surface));
+      border: 1px solid color-mix(in oklab, var(--accent) 26%, var(--border));
+      border-radius: 14px;
+    }
+
+    .offer-stack-total-lbl {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .offer-stack-total-val {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: clamp(22px, 2.4vw, 28px);
+      color: var(--text);
+      letter-spacing: -.02em;
+      text-decoration: line-through;
+    }
+
+    /* Price Card */
+    .price-card {
+      position: sticky;
+      top: 100px;
+      background: linear-gradient(180deg, var(--surface-2) 0, var(--surface) 100%);
+      border: 1.5px solid var(--accent);
+      border-radius: 24px;
+      padding: 36px;
+      box-shadow:
+        0 30px 80px -20px rgba(0,0,0,.6),
+        0 0 0 6px color-mix(in oklab, var(--accent) 10%, transparent),
+        inset 0 1px 0 rgba(255,255,255,.05);
+    }
+
+    .price-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #1a0a02;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .price-from {
+      font-family: var(--font-mono);
+      font-size: 14px;
+      color: var(--text-muted);
+      letter-spacing: .05em;
+      margin-bottom: 4px;
+    }
+
+    .price-from .strike { text-decoration: line-through; color: var(--text-muted); }
+
+    .price-main {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      margin-bottom: 6px;
+    }
+
+    .price-main .currency {
+      font-family: var(--font-display);
+      font-size: 32px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .price-main .num {
+      font-family: var(--font-display);
+      font-size: clamp(72px, 8vw, 96px);
+      font-weight: 700;
+      letter-spacing: -.04em;
+      line-height: 1;
+      color: var(--text);
+    }
+
+    .price-main .cents {
+      font-family: var(--font-display);
+      font-size: 28px;
+      color: var(--text-dim);
+      font-weight: 600;
+      align-self: flex-start;
+      padding-top: 14px;
+    }
+
+    .price-pix { font-size: 14px; color: var(--text-dim); margin-bottom: 4px; }
+
+    .price-installments {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .price-installments b { color: var(--text-dim); }
+
+    .price-cta { width: 100%; }
+
+    .price-perks {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px dashed var(--border);
+      display: grid;
+      gap: 10px;
+    }
+
+    .price-perk {
+      display: flex;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-dim);
+      align-items: center;
+    }
+
+    .price-perk .ico { color: var(--success); font-size: 16px; flex-shrink: 0; }
+
+    /* ========== GUARANTEE ========== */
+    .guarantee { background: var(--bg-elev); }
+
+    .guarantee-card {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 36px;
+      align-items: center;
+      padding: 40px;
+      background: linear-gradient(135deg, var(--surface-2), var(--surface));
+      border: 1px solid var(--border-strong);
+      border-radius: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (max-width: 720px) {
+      .guarantee-card { grid-template-columns: 1fr; text-align: center; }
+      .guarantee-seal { margin: 0 auto; }
+    }
+
+    .guarantee-seal {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .guarantee-seal-core {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 25%, color-mix(in oklab, var(--accent) 22%, var(--surface)) 0, var(--surface) 70%);
+      border: 1px solid color-mix(in oklab, var(--accent) 40%, var(--border));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.06), 0 14px 30px -10px rgba(0,0,0,.5);
+    }
+
+    .guarantee-seal-num {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 52px;
+      color: var(--text);
+      letter-spacing: -.04em;
+      line-height: 1;
+    }
+
+    .guarantee-seal-sub {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .guarantee-seal-ring {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      animation: sealSpin 22s linear infinite;
+    }
+
+    @keyframes sealSpin { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+
+    .guarantee h3 { font-size: clamp(26px, 2.8vw, 36px); margin-bottom: 10px; }
+
+    .guarantee p {
+      color: var(--text-dim);
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 50ch;
+    }
+
+    .guarantee .punch { color: var(--text); font-weight: 600; }
+
+    /* ========== FAQ ========== */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 60px;
+    }
+
+    @media (max-width: 800px) { .faq-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+    .faq-side h2 { margin-bottom: 18px; }
+    .faq-side p { color: var(--text-dim); font-size: 16px; line-height: 1.6; }
+
+    .faq-list { display: grid; gap: 2px; }
+
+    .faq-item { border-top: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: 1px solid var(--border); }
+
+    .faq-q {
+      padding: 22px 0;
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -.01em;
+    }
+
+    .faq-q .ico {
+      color: var(--accent);
+      font-size: 22px;
+      transition: transform .2s;
+    }
+
+    .faq-item.open .faq-q .ico { transform: rotate(45deg); }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .3s, padding .2s;
+      color: var(--text-dim);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .faq-item.open .faq-a { max-height: 250px; padding-bottom: 22px; }
+
+    /* ========== FINAL CTA ========== */
+    .final-cta {
+      padding: 120px 0;
+      background: radial-gradient(700px 400px at 50% 80%, color-mix(in oklab, var(--accent) 14%, transparent), transparent 60%), var(--bg);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .final-cta-inner { max-width: 800px; margin: 0 auto; }
+
+    .final-cta h2 {
+      font-size: clamp(40px, 6vw, 78px);
+      letter-spacing: -.03em;
+      line-height: 1;
+      margin-bottom: 32px;
+    }
+
+    .final-cta h2 .accent { color: var(--accent); }
+
+    .final-cta-versions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin: 32px auto 40px;
+      max-width: 720px;
+    }
+
+    @media (max-width: 700px) { .final-cta-versions { grid-template-columns: 1fr; } }
+
+    .version {
+      text-align: left;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px;
+      position: relative;
+    }
+
+    .version.bad { opacity: .55; }
+
+    .version.good {
+      border-color: color-mix(in oklab, var(--accent) 50%, var(--border));
+      background: color-mix(in oklab, var(--accent) 6%, var(--surface));
+    }
+
+    .version-tag {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .version.good .version-tag { color: var(--accent); }
+    .version h4 { font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+    .version p { font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ========== URGENCY BAR ========== */
+    .urgency-bar {
+      background: linear-gradient(90deg, var(--accent-deep), var(--accent), var(--accent-2));
+      color: #1a0a02;
+      text-align: center;
+      padding: 10px 16px;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: .02em;
+    }
+
+    .urgency-bar .countdown {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      background: rgba(0,0,0,.2);
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 8px;
+    }
+
+    /* ========== ANIMAÇÕES DE SCROLL COM BLUR ========== */
+    @keyframes fadeBlurUp {
+      0% {
+        opacity: 0;
+        filter: blur(16px);
+        transform: translateY(50px) scale(0.96);
+      }
+      60% {
+        opacity: 0.5;
+        filter: blur(4px);
+        transform: translateY(10px) scale(0.98);
+      }
+      100% {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes fadeBlurIn {
+      0% {
+        opacity: 0;
+        filter: blur(20px);
+        transform: scale(0.9);
+      }
+      50% {
+        opacity: 0.6;
+        filter: blur(8px);
+        transform: scale(0.96);
+      }
+      100% {
+        opacity: 1;
+        filter: blur(0px);
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideBlurLeft {
+      0% {
+        opacity: 0;
+        filter: blur(12px);
+        transform: translateX(-40px);
+      }
+      100% {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideBlurRight {
+      0% {
+        opacity: 0;
+        filter: blur(12px);
+        transform: translateX(40px);
+      }
+      100% {
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateX(0);
+      }
+    }
+
+    /* Classe base para elementos com animação de scroll + blur */
+    .scroll-blur {
+      opacity: 0;
+      filter: blur(16px);
+      transform: translateY(50px) scale(0.96);
+      transition: none;
+      will-change: transform, opacity, filter;
+    }
+
+    /* Quando o elemento entra na tela, aplica a animação */
+    .scroll-blur.visible {
+      animation: fadeBlurUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    .scroll-blur-left {
+      opacity: 0;
+      filter: blur(12px);
+      transform: translateX(-40px);
+      will-change: transform, opacity, filter;
+    }
+
+    .scroll-blur-left.visible {
+      animation: slideBlurLeft 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    .scroll-blur-right {
+      opacity: 0;
+      filter: blur(12px);
+      transform: translateX(40px);
+      will-change: transform, opacity, filter;
+    }
+
+    .scroll-blur-right.visible {
+      animation: slideBlurRight 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    .scroll-blur-scale {
+      opacity: 0;
+      filter: blur(20px);
+      transform: scale(0.9);
+      will-change: transform, opacity, filter;
+    }
+
+    .scroll-blur-scale.visible {
+      animation: fadeBlurIn 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    /* Delay helpers */
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+    .delay-5 { animation-delay: 0.5s; }
+
+    /* ========== VALUE PROP ========== */
+    .value-prop { padding: 110px 0 100px; position: relative; overflow: hidden; }
+
+    .value-prop::before {
+      content: "";
+      position: absolute;
+      right: -120px;
+      top: 40px;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(closest-side, color-mix(in oklab, var(--accent) 14%, transparent), transparent);
+      filter: blur(20px);
+      pointer-events: none;
+    }
+
+    .value-prop-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+      gap: 80px;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) { .value-prop-grid { grid-template-columns: 1fr; gap: 56px; } }
+
+    .value-prop-punctum {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(32px, 3.6vw, 52px);
+      line-height: 1.08;
+      letter-spacing: -.025em;
+      color: var(--text);
+    }
+
+    .value-prop-punctum em {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent);
+      letter-spacing: -.015em;
+    }
+
+    .value-prop-notes {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .value-prop-notes li {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 20px;
+      align-items: baseline;
+      padding: 22px 0;
+      border-top: 1px solid color-mix(in oklab, var(--border) 70%, transparent);
+    }
+
+    .value-prop-notes li:first-child { border-top: 0; padding-top: 4px; }
+
+    .value-prop-notes .n {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+      font-size: 32px;
+      color: var(--accent);
+      line-height: 1;
+      letter-spacing: -.02em;
+    }
+
+    .value-prop-notes p {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-dim);
+    }
+
+    .value-prop-notes p b { color: var(--text); font-weight: 700; }
+
+    /* Scrollbar styling */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent-deep); }
+  </style>
+</head>
+<body>
+
+<div id="app">
+
+  <!-- URGENCY BAR -->
+  <div class="urgency-bar">
+    🔥 Oferta por tempo limitado — preço sobe em breve
+    <span class="countdown" id="countdown">23:59:59</span>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="wrap nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-text">Renda Extra com Claude</span>
+      </a>
+      <div class="nav-links">
+        <a href="#modulos">Módulos</a>
+        <a href="#depoimentos">Resultados</a>
+        <a href="#preco">Preço</a>
+        <a href="#preco" class="btn btn-primary nav-cta">Quero Começar →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-blur-overlay" id="heroBlur"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <div class="hero-eyebrow-row">
+          <div class="eyebrow"><span class="dot"></span> Vagas limitadas</div>
+        </div>
+        <h1>Ganhe <span class="accent-word">renda extra</span> usando a IA mais poderosa do mundo</h1>
+        <p class="hero-sub">
+          Descubra como <b>pessoas comuns</b> estão usando o <b>Claude AI</b> para gerar
+          <b>R$2.000 a R$8.000 por mês</b> de renda extra — sem precisar de experiência,
+          sem investimento inicial e no seu próprio tempo.
+        </p>
+        <div class="hero-cta-row">
+          <a href="#preco" class="btn btn-primary btn-xl">
+            Garantir minha vaga
+            <span class="btn-arrow">→</span>
+          </a>
+          <a href="#modulos" class="btn btn-ghost btn-xl">Ver conteúdo</a>
+        </div>
+        <div class="cta-trust">
+          <span><span class="check">✓</span> Acesso imediato</span>
+          <span><span class="check">✓</span> Garantia de 7 dias</span>
+          <span><span class="check">✓</span> Sem mensalidade</span>
+        </div>
+      </div>
+
+      <!-- Dashboard Mock -->
+      <div class="dash scroll-blur-scale">
+        <div class="dash-head">
+          <div class="dash-title">Dashboard · Renda Mensal</div>
+          <div class="dash-pill">● ao vivo</div>
+        </div>
+        <div class="dash-mrr-label">Ganhos deste mês</div>
+        <div class="dash-mrr">
+          <span class="currency">R$</span>4.827
+          <span class="delta">↑ +38%</span>
+        </div>
+        <div class="dash-sub">Via freelancing com Claude AI</div>
+        <div class="dash-bars">
+          <div class="dash-bar" style="height:25%"></div>
+          <div class="dash-bar" style="height:35%"></div>
+          <div class="dash-bar" style="height:30%"></div>
+          <div class="dash-bar" style="height:45%"></div>
+          <div class="dash-bar" style="height:40%"></div>
+          <div class="dash-bar" style="height:55%"></div>
+          <div class="dash-bar" style="height:50%"></div>
+          <div class="dash-bar" style="height:65%"></div>
+          <div class="dash-bar" style="height:60%"></div>
+          <div class="dash-bar" style="height:75%"></div>
+          <div class="dash-bar" style="height:85%"></div>
+          <div class="dash-bar last" style="height:95%"></div>
+        </div>
+        <div class="dash-stats">
+          <div>
+            <div class="dash-stat-label">Clientes</div>
+            <div class="dash-stat-val">12</div>
+          </div>
+          <div>
+            <div class="dash-stat-label">Projetos</div>
+            <div class="dash-stat-val">27</div>
+          </div>
+          <div>
+            <div class="dash-stat-label">Satisfação</div>
+            <div class="dash-stat-val green">98%</div>
+          </div>
+        </div>
+        <div class="dash-tag">RESULTADO REAL ✦</div>
+      </div>
+    </div>
+
+    <!-- Trust Strip -->
+    <div class="wrap">
+      <div class="trust-strip">
+        <span class="label">Números reais</span>
+        <span class="stat-mini"><b>+2.400</b> alunos</span>
+        <span class="stat-mini"><b>4.9</b> ★ avaliação</span>
+        <span class="stat-mini"><b>97%</b> aprovação</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE PROP -->
+  <section class="value-prop">
+    <div class="wrap">
+      <div class="section-tag">Por que este curso?</div>
+      <div class="value-prop-grid">
+        <div class="scroll-blur-left">
+          <div class="value-prop-punctum">
+            <span style="display:block">A IA não vai</span>
+            <span style="display:block">substituir você.</span>
+            <span style="display:block"><em>Mas quem usa IA</em></span>
+            <span style="display:block">vai.</span>
+          </div>
+        </div>
+        <ul class="value-prop-notes">
+          <li class="scroll-blur-right delay-1">
+            <span class="n">01</span>
+            <p><b>O mercado mudou.</b> Empresas pagam até R$500 por textos, e-mails e conteúdos que você cria em 30 minutos com Claude.</p>
+          </li>
+          <li class="scroll-blur-right delay-2">
+            <span class="n">02</span>
+            <p><b>Sem experiência?</b> O Claude é sua equipe. Ele escreve, programa, analisa dados e cria estratégias por você.</p>
+          </li>
+          <li class="scroll-blur-right delay-3">
+            <span class="n">03</span>
+            <p><b>Sem investimento.</b> Tudo que você precisa é um computador com internet. O Claude tem plano gratuito.</p>
+          </li>
+          <li class="scroll-blur-right delay-4">
+            <span class="n">04</span>
+            <p><b>Resultados rápidos.</b> Alunos relatam os primeiros ganhos já na primeira semana de aplicação do método.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN POINTS -->
+  <section class="pain" id="dores">
+    <div class="wrap">
+      <div class="pain-header scroll-blur">
+        <div class="section-tag">Você se identifica?</div>
+        <h2>Marque tudo que <span style="color:var(--accent)">se aplica</span> a você</h2>
+        <p style="color:var(--text-dim);margin-top:12px;">Se marcou 3 ou mais, este curso foi feito pra você.</p>
+      </div>
+
+      <div class="pain-list">
+        <div class="pain-item scroll-blur delay-1" onclick="togglePain(this)">
+          <div class="pain-check"></div>
+          Seu salário acaba antes do mês terminar
+        </div>
+        <div class="pain-item scroll-blur delay-2" onclick="togglePain(this)">
+          <div class="pain-check"></div>
+          Já tentou renda extra mas não deu certo
+        </div>
+        <div class="pain-item scroll-blur delay-3" onclick="togglePain(this)">
+          <div class="pain-check"></div>
+          Não tem dinheiro para investir em nada
+        </div>
+        <div class="pain-item scroll-blur delay-4" onclick="togglePain(this)">
+          <div class="pain-check"></div>
+          Sente que está ficando para trás na era da IA
+        </div>
+        <div class="pain-item scroll-blur delay-1" onclick="togglePain(this)">
+          <div class="pain-check"></div>
+          Quer trabalhar de casa, no seu próprio horário
+        </div>
+        <div class="pain-item scroll-blur delay-2" onclick="togglePain(this)">
+          <div class="pain-check"></div>
+          Não sabe programar e acha que isso é limitante
+        </div>
+        <div class="pain-item scroll-blur delay-3" onclick="togglePain(this)">
+          <div class="pain-check"></div>
+          Cansou de promessas de "dinheiro fácil"
+        </div>
+        <div class="pain-item scroll-blur delay-4" onclick="togglePain(this)">
+          <div class="pain-check"></div>
+          Quer uma habilidade real que paga bem
+        </div>
+      </div>
+
+      <div class="pain-counter scroll-blur">
+        <div class="pain-counter-text">
+          Você marcou <b id="painCount">0</b> de 8 — <span id="painMsg">Clique nos itens acima</span>
+        </div>
+        <div class="pain-counter-num" id="painPercent">0%</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULES -->
+  <section id="modulos">
+    <div class="wrap">
+      <div class="solution-header scroll-blur">
+        <div class="section-tag">O que você vai aprender</div>
+        <h2>Do zero ao seu primeiro <span class="accent">dinheiro com IA</span></h2>
+        <div class="solution-meta">
+          <div class="solution-meta-item">
+            <div class="num">5<span>+</span></div>
+            <div class="lbl">Módulos</div>
+          </div>
+          <div class="solution-meta-item">
+            <div class="num">28<span>+</span></div>
+            <div class="lbl">Aulas</div>
+          </div>
+          <div class="solution-meta-item">
+            <div class="num">12<span>h</span></div>
+            <div class="lbl">de Conteúdo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-track"></div>
+
+        <div class="module active scroll-blur delay-1">
+          <div class="module-num">01<span>MOD</span></div>
+          <div class="module-body">
+            <div class="module-title">Fundamentos do Claude AI</div>
+            <div class="module-desc">Domine o Claude do zero. Aprenda a criar prompts profissionais, entenda como a IA pensa e descubra as funcionalidades que 99% das pessoas não conhecem.</div>
+            <div class="module-deliverable">🎯 Resultado: domínio total da ferramenta</div>
+          </div>
+        </div>
+
+        <div class="module scroll-blur delay-2">
+          <div class="module-num">02<span>MOD</span></div>
+          <div class="module-body">
+            <div class="module-title">Redação & Copywriting com IA</div>
+            <div class="module-desc">Aprenda a criar textos que vendem, e-mails persuasivos, posts para redes sociais e artigos de blog. Empresas pagam de R$100 a R$500 por peça.</div>
+            <div class="module-deliverable">💰 Resultado: primeiros serviços vendidos</div>
+          </div>
+        </div>
+
+        <div class="module scroll-blur delay-3">
+          <div class="module-num">03<span>MOD</span></div>
+          <div class="module-body">
+            <div class="module-title">Freelancing Inteligente</div>
+            <div class="module-desc">Como encontrar clientes, precificar seus serviços, montar seu portfólio com IA e se posicionar como especialista mesmo sendo iniciante.</div>
+            <div class="module-deliverable">🚀 Resultado: carteira de clientes</div>
+          </div>
+        </div>
+
+        <div class="module scroll-blur delay-4">
+          <div class="module-num">04<span>MOD</span></div>
+          <div class="module-body">
+            <div class="module-title">Criação de Produtos Digitais</div>
+            <div class="module-desc">Crie e-books, planilhas, templates e mini-cursos usando o Claude. Venda no automático na Hotmart, Eduzz e outros marketplaces.</div>
+            <div class="module-deliverable">📦 Resultado: produto digital pronto</div>
+          </div>
+        </div>
+
+        <div class="module scroll-blur delay-5">
+          <div class="module-num">05<span>MOD</span></div>
+          <div class="module-body">
+            <div class="module-title">Escala & Automação</div>
+            <div class="module-desc">Automatize seus processos, crie sistemas de entrega e aprenda a escalar para R$5.000+ por mês sem trabalhar mais horas.</div>
+            <div class="module-deliverable">⚡ Resultado: renda recorrente</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits">
+    <div class="wrap">
+      <div class="section-tag">O que está incluso</div>
+      <h2 class="scroll-blur">Tudo que você precisa para <span style="color:var(--accent)">começar a ganhar</span></h2>
+
+      <div class="benefits-grid">
+        <div class="benefit scroll-blur-left delay-1">
+          <div class="benefit-ico">📋</div>
+          <div class="benefit-text"><b>Biblioteca de Prompts</b> — +50 prompts profissionais prontos para copiar e usar nos seus serviços</div>
+        </div>
+        <div class="benefit scroll-blur-right delay-1">
+          <div class="benefit-ico">🎯</div>
+          <div class="benefit-text"><b>Templates de Propostas</b> — Modelos prontos para enviar para clientes e fechar projetos rapidamente</div>
+        </div>
+        <div class="benefit scroll-blur-left delay-2">
+          <div class="benefit-ico">🔄</div>
+          <div class="benefit-text"><b>Atualizações gratuitas</b> — O curso é atualizado sempre que o Claude lança novidades, sem custo extra</div>
+        </div>
+        <div class="benefit scroll-blur-right delay-2">
+          <div class="benefit-ico">🏆</div>
+          <div class="benefit-text"><b>Certificado de conclusão</b> — Comprove suas habilidades e adicione ao seu LinkedIn e portfólio</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="depoimentos">
+    <div class="wrap">
+      <div class="testimonials">
+        <div class="testimonials-head scroll-blur">
+          <h3>O que nossos alunos dizem</h3>
+          <div class="section-tag" style="margin-bottom:0">Resultados reais</div>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial scroll-blur-scale delay-1">
+            <div class="tag">R$3.200/mês</div>
+            <div class="testimonial-quote">"Em 3 semanas já estava atendendo clientes. Uso o Claude para criar conteúdos de redes sociais e já tenho 8 clientes fixos. Nunca imaginei que seria tão acessível."</div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">M</div>
+              <div>
+                <div class="testimonial-name">Mariana S.</div>
+                <div class="testimonial-meta">Social Media · São Paulo</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial scroll-blur-scale delay-2">
+            <div class="tag">R$5.800/mês</div>
+            <div class="testimonial-quote">"Saí do zero absoluto. Hoje faço copywriting para e-commerces usando o Claude e ganho mais do que no meu emprego CLT. O módulo de freelancing foi um divisor de águas."</div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">R</div>
+              <div>
+                <div class="testimonial-name">Rafael T.</div>
+                <div class="testimonial-meta">Copywriter · Belo Horizonte</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial scroll-blur-scale delay-3">
+            <div class="tag">R$2.100/mês</div>
+            <div class="testimonial-quote">"Sou mãe solo e trabalho de casa. O curso me ensinou a criar e-books com o Claude e vender na Hotmart. Já vendi mais de 200 cópias do meu primeiro produto!"</div>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">A</div>
+              <div>
+                <div class="testimonial-name">Ana Paula L.</div>
+                <div class="testimonial-meta">Infoprodutora · Curitiba</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="offer" id="preco">
+    <div class="wrap">
+      <div class="offer-grid">
+        <div>
+          <div class="offer-header scroll-blur">
+            <div class="section-tag">Investimento</div>
+            <h2>Tudo isso por <span class="accent">menos que um delivery</span></h2>
+            <p style="margin-top:16px;">Você está a uma decisão de distância de transformar seu tempo livre em dinheiro real.</p>
+          </div>
+
+          <div class="offer-stack-wrap scroll-blur">
+            <ul class="offer-stack">
+              <li>
+                <span class="n">01</span>
+                <div>
+                  <div class="offer-stack-title">Curso completo (5 módulos)</div>
+                  <div class="offer-stack-sub">Videoaulas práticas</div>
+                </div>
+                <span class="offer-stack-price">R$97</span>
+              </li>
+              <li>
+                <span class="n">02</span>
+                <div>
+                  <div class="offer-stack-title">Biblioteca de Prompts</div>
+                  <div class="offer-stack-sub">Copia e cola</div>
+                </div>
+                <span class="offer-stack-price">R$47</span>
+              </li>
+              <li>
+                <span class="n">03</span>
+                <div>
+                  <div class="offer-stack-title">Templates de Propostas</div>
+                  <div class="offer-stack-sub">Prontos para usar</div>
+                </div>
+                <span class="offer-stack-price">R$37</span>
+              </li>
+              <li>
+                <span class="n">04</span>
+                <div>
+                  <div class="offer-stack-title">Comunidade exclusiva</div>
+                  <div class="offer-stack-sub">Acesso vitalício</div>
+                </div>
+                <span class="offer-stack-price">R$97</span>
+              </li>
+              <li>
+                <span class="n">05</span>
+                <div>
+                  <div class="offer-stack-title">Atualizações gratuitas</div>
+                  <div class="offer-stack-sub">Para sempre</div>
+                </div>
+                <span class="offer-stack-price">R$∞</span>
+              </li>
+            </ul>
+            <div class="offer-stack-total">
+              <span class="offer-stack-total-lbl">Valor total</span>
+              <span class="offer-stack-total-val">R$278</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Price Card -->
+        <div class="price-card scroll-blur-scale">
+          <div class="price-badge">🔥 Oferta especial</div>
+          <div class="price-from">De <span class="strike">R$197,00</span></div>
+          <div class="price-main">
+            <span class="currency">R$</span>
+            <span class="num">57</span>
+            <span class="cents">,00</span>
+          </div>
+          <div class="price-pix">à vista no PIX ou cartão</div>
+          <div class="price-installments">ou <b>6x de R$10,83</b> no cartão</div>
+
+          <a href="#" class="btn btn-primary btn-xl price-cta" id="cta-buy">
+            QUERO COMEÇAR AGORA
+            <span class="btn-arrow">→</span>
+          </a>
+
+          <div class="cta-trust price-trust">
+            <span><span class="check">✓</span> Acesso imediato</span>
+            <span><span class="check">✓</span> Garantia 7 dias</span>
+          </div>
+
+          <div class="price-perks">
+            <div class="price-perk">
+              <span class="ico">✓</span> Acesso vitalício ao curso completo
+            </div>
+            <div class="price-perk">
+              <span class="ico">✓</span> +50 prompts profissionais
+            </div>
+            <div class="price-perk">
+              <span class="ico">✓</span> Templates de propostas
+            </div>
+            <div class="price-perk">
+              <span class="ico">✓</span> Suporte direto por 90 dias
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUARANTEE -->
+  <section class="guarantee">
+    <div class="wrap">
+      <div class="guarantee-card scroll-blur-scale">
+        <div class="guarantee-seal">
+          <svg class="guarantee-seal-ring" viewBox="0 0 200 200">
+            <defs>
+              <path id="circlePath" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/>
+            </defs>
+            <text fill="currentColor" style="font-family:var(--font-mono);font-size:12px;letter-spacing:3px;text-transform:uppercase;fill:var(--accent)">
+              <textPath href="#circlePath">★ GARANTIA INCONDICIONAL ★ SATISFAÇÃO TOTAL ★ SEM RISCO ★ </textPath>
+            </text>
+          </svg>
+          <div class="guarantee-seal-core">
+            <div class="guarantee-seal-num">7</div>
+            <div class="guarantee-seal-sub">DIAS</div>
+          </div>
+        </div>
+        <div>
+          <h3>Garantia incondicional de 7 dias</h3>
+          <p>
+            Se dentro de 7 dias você sentir que o curso não é para você,
+            basta enviar um e-mail e devolvemos <span class="punch">100% do seu dinheiro</span>.
+            Sem perguntas, sem burocracia, sem ressentimentos.
+            <span class="punch">O risco é todo nosso.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="wrap">
+      <div class="faq-grid">
+        <div class="faq-side scroll-blur">
+          <div class="section-tag">FAQ</div>
+          <h2>Dúvidas frequentes</h2>
+          <p style="margin-top:14px;">Ainda tem alguma dúvida? Fale conosco pelo WhatsApp.</p>
+        </div>
+        <div class="faq-list">
+
+          <div class="faq-item scroll-blur" onclick="toggleFaq(this)">
+            <button class="faq-q">
+              Preciso saber programar?
+              <span class="ico">+</span>
+            </button>
+            <div class="faq-a">
+              Não! O curso é 100% para iniciantes. Você não precisa saber programar, ter experiência com IA ou qualquer conhecimento técnico. Ensinamos tudo do zero.
+            </div>
+          </div>
+
+          <div class="faq-item scroll-blur delay-1" onclick="toggleFaq(this)">
+            <button class="faq-q">
+              O Claude é pago? Preciso gastar mais?
+              <span class="ico">+</span>
+            </button>
+            <div class="faq-a">
+              O Claude tem um plano gratuito que já é suficiente para começar. Conforme você crescer, pode optar pelo plano Pro (US$20/mês), mas não é obrigatório no início.
+            </div>
+          </div>
+
+          <div class="faq-item scroll-blur delay-2" onclick="toggleFaq(this)">
+            <button class="faq-q">
+              Em quanto tempo vejo resultados?
+              <span class="ico">+</span>
+            </button>
+            <div class="faq-a">
+              Nossos alunos mais dedicados relatam os primeiros ganhos entre 1 e 3 semanas. Depende da sua dedicação, mas o método foi desenhado para resultados rápidos.
+            </div>
+          </div>
+
+          <div class="faq-item scroll-blur delay-3" onclick="toggleFaq(this)">
+            <button class="faq-q">
+              Por quanto tempo tenho acesso?
+              <span class="ico">+</span>
+            </button>
+            <div class="faq-a">
+              Acesso vitalício! Você paga uma única vez e tem acesso ao curso para sempre, incluindo todas as atualizações futuras sem custo adicional.
+            </div>
+          </div>
+
+          <div class="faq-item scroll-blur delay-4" onclick="toggleFaq(this)">
+            <button class="faq-q">
+              E se eu não gostar?
+              <span class="ico">+</span>
+            </button>
+            <div class="faq-a">
+              Sem problema! Você tem 7 dias de garantia incondicional. Se não gostar, devolvemos 100% do seu dinheiro. Sem perguntas e sem burocracia.
+            </div>
+          </div>
+
+          <div class="faq-item scroll-blur delay-5" onclick="toggleFaq(this)">
+            <button class="faq-q">
+              Isso funciona para qualquer área?
+              <span class="ico">+</span>
+            </button>
+            <div class="faq-a">
+              Sim! O Claude é versátil. Ensinamos aplicações em copywriting, criação de conteúdo, produtos digitais, consultoria, atendimento ao cliente e muito mais.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="wrap final-cta-inner">
+      <div class="eyebrow" style="margin-bottom:28px"><span class="dot"></span> Última chance</div>
+      <h2>Duas versões do seu <span class="accent">futuro</span></h2>
+
+      <div class="final-cta-versions">
+        <div class="version bad scroll-blur-right">
+          <div class="version-tag">❌ Versão A</div>
+          <h4>Não fazer nada</h4>
+          <p>Continuar sem renda extra, vendo o salário acabar todo mês, enquanto o mundo avança com IA e você fica para trás.</p>
+        </div>
+        <div class="version good scroll-blur-left">
+          <div class="version-tag">✦ Versão B</div>
+          <h4>Agir agora</h4>
+          <p>Dominar o Claude, conquistar clientes, gerar renda extra real e ter liberdade financeira. Tudo por menos de R$60.</p>
+        </div>
+      </div>
+
+      <a href="#preco" class="btn btn-primary btn-xl scroll-blur-scale">
+        Escolher a Versão B
+        <span class="btn-arrow">→</span>
+      </a>
+      <div class="cta-trust" style="justify-content:center;margin-top:20px;">
+        <span><span class="check">✓</span> R$57,00 à vista</span>
+        <span><span class="check">✓</span> Garantia 7 dias</span>
+        <span><span class="check">✓</span> Acesso vitalício</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <p style="margin-bottom:8px;">Renda Extra com Claude · © 2025 — Todos os direitos reservados.</p>
+      <p>Este produto não garante a obtenção de resultados. Qualquer referência ao desempenho é meramente ilustrativa.</p>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  // Pain point toggle
+  let painCount = 0;
+  function togglePain(el) {
+    el.classList.toggle('checked');
+    painCount = document.querySelectorAll('.pain-item.checked').length;
+    document.getElementById('painCount').textContent = painCount;
+    document.getElementById('painPercent').textContent = Math.round((painCount/8)*100) + '%';
+    const msgs = [
+      'Clique nos itens acima',
+      'Hmm, continue...',
+      'Parece familiar?',
+      'Esse curso é pra você!',
+      'Você PRECISA desse curso!',
+      'Não perca mais tempo!',
+      'Tá na hora de mudar!',
+      'Sua vida vai mudar!',
+      'BORA! 🔥'
+    ];
+    document.getElementById('painMsg').textContent = msgs[Math.min(painCount, msgs.length-1)];
+  }
+
+  // FAQ toggle
+  function toggleFaq(el) {
+    el.classList.toggle('open');
+  }
+
+  // Countdown timer
+  function startCountdown() {
+    let hours = 23, mins = 59, secs = 59;
+    const saved = localStorage.getItem('renda-extra-countdown');
+    if (saved) {
+      const remaining = parseInt(saved) - Date.now();
+      if (remaining > 0) {
+        hours = Math.floor(remaining / 3600000);
+        mins = Math.floor((remaining % 3600000) / 60000);
+        secs = Math.floor((remaining % 60000) / 1000);
+      }
+    } else {
+      localStorage.setItem('renda-extra-countdown', Date.now() + 86400000);
+    }
+
+    setInterval(() => {
+      secs--;
+      if (secs < 0) { secs = 59; mins--; }
+      if (mins < 0) { mins = 59; hours--; }
+      if (hours < 0) { hours = 0; mins = 0; secs = 0; }
+      document.getElementById('countdown').textContent =
+        String(hours).padStart(2,'0') + ':' +
+        String(mins).padStart(2,'0') + ':' +
+        String(secs).padStart(2,'0');
+    }, 1000);
+  }
+  startCountdown();
+
+  // ========== SCROLL BLUR EFFECTS ==========
+  // 1. Navbar blur progressivo
+  const navbar = document.getElementById('navbar');
+  const hero = document.getElementById('hero');
+  const heroBlur = document.getElementById('heroBlur');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const heroHeight = hero.offsetHeight;
+
+    // Navbar blur
+    if (scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+
+    // Hero overlay blur progressivo
+    if (heroBlur) {
+      const progress = Math.min(scrollY / (heroHeight * 0.4), 1);
+      if (progress > 0.05) {
+        heroBlur.classList.add('active');
+        const blurAmount = Math.min(progress * 12, 12);
+        heroBlur.style.backdropFilter = `blur(${blurAmount}px) saturate(${100 + progress * 80}%)`;
+        heroBlur.style.background = `rgba(12,10,7,${Math.min(progress * 0.2, 0.2)})`;
+      } else {
+        heroBlur.classList.remove('active');
+        heroBlur.style.backdropFilter = 'blur(0px) saturate(100%)';
+        heroBlur.style.background = 'rgba(12,10,7,0)';
+      }
+    }
+  });
+
+  // ========== SCROLL ANIMATION OBSERVER ==========
+  // Para animações com blur + scroll
+  const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // Aplica o atraso via CSS se tiver a classe delay-*
+        scrollObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+  // Observa todos os elementos com classes de animação scroll-blur
+  document.querySelectorAll('.scroll-blur, .scroll-blur-left, .scroll-blur-right, .scroll-blur-scale').forEach(el => {
+    scrollObserver.observe(el);
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
