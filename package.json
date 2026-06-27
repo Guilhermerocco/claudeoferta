@@ -1,0 +1,17 @@
+{
+  "name": "renda-extra-claude",
+  "version": "1.0.0",
+  "description": "Landing page Renda Extra com Claude",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "deploy": "vercel --prod"
+  },
+  "keywords": ["claude", "ia", "renda-extra"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.0.0",
+    "vercel": "^32.0.0"
+  }
+}
